@@ -1,0 +1,16 @@
+{
+  "name": "user-management-system",
+  "version": "1.0.0",
+  "description": "User Management System - Calibort Technologies Assignment",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.ts",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd client && npm install"
+  },
+  "keywords": ["user-management", "express", "react", "redux", "typescript"],
+  "author": "",
+  "license": "ISC"
+}

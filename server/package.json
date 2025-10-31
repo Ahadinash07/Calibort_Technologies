@@ -1,0 +1,36 @@
+{
+  "name": "user-management-backend",
+  "version": "1.0.0",
+  "description": "Backend API for User Management System",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon index.ts",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "axios": "^1.6.2",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.5",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/cors": "^2.8.17",
+    "@types/multer": "^1.4.11",
+    "@types/morgan": "^1.9.9",
+    "typescript": "^5.3.3",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2"
+  }
+}
