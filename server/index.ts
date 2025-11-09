@@ -36,14 +36,6 @@ app.use('/uploads', express.static(uploadsPath, {
   }
 }));
 
-app.get('/health', (req, res) => {
-  res.json({
-    success: true,
-    message: 'Server is running',
-    timestamp: new Date().toISOString()
-  });
-});
-
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 
@@ -76,9 +68,8 @@ const startServer = async () => {
   try {
     await initDatabase();
     app.listen(PORT, () => {
-      console.log(`🚀 Server is running on port ${PORT}`);
-      console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
-      console.log(`🔗 API Base URL: http://localhost:${PORT}/api`);
+      console.log(`Server is running on port ${PORT}`);
+      console.log(`API Base URL: http://localhost:${PORT}/api`);
     });
   } catch (error) {
     console.error('Failed to start server:', error);
