@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const uploadsPath = path.resolve(process.env.UPLOAD_PATH || './uploads');
-console.log(`📁 Serving uploads from: ${uploadsPath}`);
+console.log(`Serving uploads from: ${uploadsPath}`);
 app.use('/uploads', express.static(uploadsPath, {
   setHeaders: (res) => {
     res.set('Cross-Origin-Resource-Policy', 'cross-origin');
